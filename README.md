@@ -1,7 +1,7 @@
 # Flutter-Helper
-————————————————————————————————————————————————————————————————————————
+
 Rich Text:-
-————————————————————————————————————————————————————————————————————————
+
 
 Container(
   margin: EdgeInsets.only(top: size.height * 0.02),
@@ -15,9 +15,9 @@ Container(
         text: " Buyer", style: textTheme.headline6),
   ])),
 ),
-————————————————————————————————————————————————————————————————————————
-Cached Network Image (Round Image)
-————————————————————————————————————————————————————————————————————————
+
+Cached Network Image (Round Image):- 
+
 CachedNetworkImage(
   imageUrl: Constant.STORAGE_PATH +
       jobDetail['consumer_avatar'],
@@ -47,9 +47,9 @@ CachedNetworkImage(
     fit: BoxFit.contain,
   ),
 ),
-————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————————————————————————————————————
 Firebase Date time convert:- (Ex:-Timestamp(seconds=1645856985, nanoseconds=821000000))
-————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+———————————————————————————————————————————————————————————————————————————————————————
 
 print(DateFormat.yMd().format(
     DateTime.fromMicrosecondsSinceEpoch(firedata[0]
@@ -65,6 +65,4 @@ print(DateFormat.jm().format(
         .microsecondsSinceEpoch)));
 
 OUTPUT:-  11:59 AM
-
-————————————————————————————————————————————————————————————
 
