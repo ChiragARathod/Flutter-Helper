@@ -1,0 +1,231 @@
+---------------------------------------------------------------------------------
+as int; (On Changed Int)
+---------------------------------------------------------------------------------
+  currentPosition = LatLng(
+        addresses.first.coordinates.latitude,
+        addresses.first.coordinates.longitude,
+      ) as Position?;
+---------------------------------------------------------------------------------
+String name = snapshot.data.get('name');
+//instead of 
+String name = (snapshot.data.data() as Map<String,dynamic>)['name']
+---------------------------------------------------------------------------------
+Map<String,dynamic> data = snapshot.data.data() as Map<String,dynamic>);
+String name = data['name'] ?? '';
+---------------------------------------------------------------------------------
+doc.get('name') ?? '', 
+
+to
+doc.data()['name'] ?? '',
+---------------------------------------------------------------------------------
+  final List<Widget>? actions;
+ children: actions ,
+
+change to 
+
+ children: actions as List<Widget>,
+
+---------------------------------------------------------------------------------
+
+Error: Cannot run with sound null safety, because the following dependencies
+don't support null safety:
+
+ - package:flutter_icons
+
+
+Solution:-
+
+// @dart=2.9 (add in main.dart file)
+
+// ignore: import_of_legacy_library_into_null_safe
+---------------------------------------------------------------------------------
+Listview.builder:-
+-------------------------------------------------------------------------------------------------
+ListView.builder(reverse: true) -- reverse list
+----------------------
+Shrinkwrap:true
+----------------------
+  if (i < 2)
+            return _buildBox(color: Colors.blue);
+          else if (i == 3)
+            return _horizontalListView();
+          else
+            return _buildBox(color: Colors.blue);
+
+
+------------------------------------------------------------
+
+
+1. Notification Color Change
+2. Splash screen pachi ni add show nathi thati
+3. Map Side Clear
+
+------------------------------------------------------------------------------
+_launchSocial('https://www.instagram.com/YOURNAME/', '')
+_launchSocial('fb://profile/408834569303957', 'https://www.facebook.com/dorockxl')
+
+------------------------------------------------------------------------------
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>fb408834569303957</string>
+        </array>
+    </dict>
+</array>
+
+-----------------------------------------------------------------------------------------------------
+Test Ads
+-----------------------------------------------------------------------------------------------------
+App Open	ca-app-pub-3940256099942544/3419835294
+Banner	ca-app-pub-3940256099942544/6300978111
+Interstitial	ca-app-pub-3940256099942544/1033173712
+Interstitial Video	ca-app-pub-3940256099942544/8691691433
+Rewarded	ca-app-pub-3940256099942544/5224354917
+Rewarded Interstitial	ca-app-pub-3940256099942544/5354046379
+Native Advanced	ca-app-pub-3940256099942544/2247696110
+Native Advanced Video	ca-app-pub-3940256099942544/1044960115
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Welcome {
+    List<Post>? posts;
+    List<Comment>? comments;
+    Profile? profile;
+
+    Welcome({
+        this.posts,
+        this.comments,
+        this.profile,
+    });
+
+    factory Welcome.fromJson(Map<String, dynamic> json) => Welcome(
+        posts: List<Post>.from(json["posts"].map((x) => Post.fromJson(x))),
+        comments: List<Comment>.from(json["comments"].map((x) => Comment.fromJson(x))),
+        profile: Profile.fromJson(json["profile"]),
+    );
+
+    Map<String, dynamic> toJson() => {
+        "posts": List<dynamic>.from(posts.map((x) => x.toJson())),
+        "comments": List<dynamic>.from(comments.map((x) => x.toJson())),
+        "profile": profile.toJson(),
+    };
+ }
+-----------------------------------------------------------------------------------------------------
+
+Navigator.of(context, rootNavigator: true).pop();
+
+--------------------------------------------------------------------------------------------------
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+--------------------------------------------------------------------------------------------------
+
+flutter upgrade
+flutter upgrade --force  
+
+flutter downgrade
+dart pub get 
+
+dart fix --dry-run
+dart fix --apply 
+
+flutter doctor -v   
+flutter doctor -vdart fix --dry-run
+
+dart migrate   
+
+flutter channel stable  
+
+ java -version  
+flutter build appbundle  
+
+
+gradle signingReport (For Get SHA1 Key)
+--------------------------------------------------------------------------------------------------
+Flutter Upgrade Android Project
+
+1. Pubspack.yaml change version
+version: 1.0.9+13
+version: 1.0.10+14
+
+2. flutter build appbundle
+
+-----------------------------------------------------------------------------------------------------
+Android 12 update
+
+add in all activity:- android:exported="true"
+--------------------------------------------------------------------------------------------------
+Flutter :-
+
+https://flutterappworld.com/
+https://fluttertutorial.in/
+https://fluttermarket.com/
+https://flutterpolice.com/
+https://www.fluttercampus.com/
+https://fluttershapemaker.com/
+
+-----------------------------------------------------------------------------------------------------
+Android :-
+
+https://uniqueandrocode.com/
+https://askandroidquestions.com/
+-----------------------------------------------------------------------------------------------------
+Important website
+
+https://www.pngegg.com/ (Png image download)
+https://pravatar.cc/ (Random User image)
+www.instastorysaver.com/ (Youtube playlist download)
+
+-------------------------------------------------------------------------------------------------
+Flutter Helper
+-------------------------------------------------------------------------------------------------
+https://flutterappworld.com/
+https://gallery.flutter.dev/#/
+
+https://flutter.github.io/samples/# 
+
+###########################
+https://github.com/dickyrey
+https://protocoderspoint.com/ (Guide)
+https://petercoding.com/ (Guide)
+https://codewithandrea.com/ (Guide)
+https://www.appstorescreenshot.com/ (App Screen shot create)
+https://www.remove.bg/upload (Background remove)
+https://fluttertutorial.in/category/flutter/ (Flutter Guide)
+https://cybdom.tech/page/2/ (Flutter redyment design)
+
+https://blog.devgenius.io/firebase-flutter-dynamic-links-step-by-step-guide-630402ee729b (Dynamic Link)
+
+https://medium.flutterdevs.com/chatbot-in-flutter-using-dialogflow-70e28665a827 (DialogFLow)
+
+https://github.com/juicycleff/flutter-unity-view-widget (FLutter Unity)
+-----------
+http://tomeko.net/online_tools/hex_to_base64.php (Sha1 key to hashkey)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
